@@ -1,6 +1,11 @@
 # C++
+## 목차
+- [fast I/O](#fast-io)
 
-## fast I/O
+- [메모리 초기화](#메모리-초기화)
+
+
+## fast IO
 10만 이상의 input, output시 cin,cout으로 입출력시 사용하면 된다.
 단, 출력시 endl 대신 '\n'를 사용해야됨(사용하지 않으면 ?)
 ```c++
@@ -45,7 +50,7 @@ val 채울 범위(first, end, val)로 채운다.
 
 1차원의 경우 memset처럼 사용하면 되지만 2차원의 경우는 신경써줘야한다.
 
-#### 1차원 fill
+- #### 1차원 fill
 ```C++
 #include <algorithm>
 void fill(ForwardIterator first, ForwardIterator last, const T& val);
@@ -54,7 +59,7 @@ vector<int> v(5);
 fill(v.begin(),v.end(), 3);
 ```
 
-#### 2차원 fill
+- #### 2차원 fill
 vector경우
 fill(배열 행 시작, 배열 행 끝, (배열 열 길이,val));
 
