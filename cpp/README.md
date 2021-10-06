@@ -4,6 +4,7 @@
 
 - [메모리 초기화](#메모리-초기화)
 
+- [string 특정 문자열 위치들 찾기](#string-특정-문자열들-찾기)
 
 ## fast IO
 10만 이상의 input, output시 cin,cout으로 입출력시 사용하면 된다.
@@ -71,4 +72,23 @@ void fill(ForwardIterator first, ForwardIterator last, const T& val);
 vector<vector<int>> v(5,vector<int>(5));
 // vector 2차원 배열 3으로 세팅
 fill(v.begin(),v.end(), vector<int>(5,3));
+```
+
+## string 특정 문자열들 찾기
+find로는 처음 나오는 위치만 찾을 수 있다.
+
+이를 이용해 string 문자열 내 특정 문자열들을 찾아 낼 수 있다.
+```C++
+#include <string>
+#include <vector>
+
+int main(){
+  string s = "hello, my, code, c++";
+  vector<int> idxList;
+  size_t idx = s.find(",");
+  while(idx!=string::npos){
+    idxList.push_back(idx);
+    idx = s.find(",", idx+1);
+  }
+}
 ```
